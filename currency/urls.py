@@ -6,5 +6,5 @@ from currency.views import CurrencyRateListView
 app_name = CurrencyConfig.name
 
 urlpatterns = [
-    path('show_rates/', CurrencyRateListView.as_view(), name='show_rates'),
+    path('show_rates', CurrencyRateListView.as_view(), name='show_rates'),
 ]

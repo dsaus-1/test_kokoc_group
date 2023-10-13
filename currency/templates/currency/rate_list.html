@@ -1,0 +1,40 @@
+{% extends 'currency/base.html' %}
+
+
+{% block content %}
+
+    <div class="center">
+        <h1 class="display-4">Курс валют</h1>
+    </div>
+
+    <div class="container">
+        <table class="table table-hover border-dark"> 
+            <thead>
+            <tr>
+                <td>Название валюты</td>
+                <td>Стоимость</td>
+                <td>Дата</td>
+            </tr>
+            </thead>
+            <tbody>
+            {% for object in filter.qs %}
+                
+                <tr>
+                    <td>{{ object.currency.char_code }}</td>
+                    <td>{{ object.value }}</td>
+                    <td>{{ object.date }}</td>
+
+                </tr>
+
+                </div>
+
+            {% endfor %}
+
+    </tbody>
+    </table>
+
+
+    <script src="/static/js/bootstrap.bundle.js"></script>
+
+
+{% endblock %}

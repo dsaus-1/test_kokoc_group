@@ -20,5 +20,7 @@
 
 # Описание:
 Для добавления данных реализована команда "python manage.py data_collection".
+
 Фильтрация qs происходит через django-filter.
+
 Проект запускается на локальном компьютере с помощью команды "python manage.py data_collection runserver"
